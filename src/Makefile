@@ -21,7 +21,7 @@ create_app:
 	cp Kewlers.icns $(APP_DIR)/Contents/Resources/Kewlers.icns
 	cp onefinger $(APP_DIR)/Contents/MacOS
 	cp libbass.dylib $(APP_DIR)/Contents/Frameworks
-	cp -r ../data $(APP_DIR)/Contents/Resources
+	cp -r data $(APP_DIR)/Contents/Resources
 	install_name_tool -id "@executable_path/../Frameworks/libbass.dylib" "OneFinger.app/Contents/Frameworks/libbass.dylib"
 	codesign --force --deep --sign - "OneFinger.app"
 
